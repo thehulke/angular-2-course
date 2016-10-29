@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
+import {Component} from "@angular/core";
 
 @Component({
-  selector   : 'app',
-  templateUrl: `<h1>Angular Training Seed</h1>`,
+  selector: 'app',
+  template: `<h1>Angular Training Seed</h1>`,
 })
 
 export class AppComponent {}
