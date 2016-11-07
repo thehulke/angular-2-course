@@ -5,7 +5,9 @@ import {Item} from "./providers/item";
   selector: "todolist-list-items",
   template: `
         <ul>
-            <todolist-list-item *ngFor='let item of items' [item]="item"></todolist-list-item>
+            <todolist-list-item
+             *ngFor='let item of items' 
+             [item]="item"></todolist-list-item>
         </ul>
     `
 })

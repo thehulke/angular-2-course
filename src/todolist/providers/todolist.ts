@@ -14,10 +14,7 @@ export class Todolist {
     private store: Storage;
 
     constructor(store: Storage) {
-        this.items = [
-            new Item('first task'),
-            new Item('another task')
-        ];
+        this.items = [];
         this.store = store;
     }
 

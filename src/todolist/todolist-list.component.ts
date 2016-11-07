@@ -5,7 +5,7 @@ import {Todolist} from "./providers/todolist";
 @Component({
     selector: "todolist-list",
     template: `
-        <todolist-list-input></todolist-list-input>
+        <todolist-list-input (itemAdded)="_list.addItem($event)"></todolist-list-input>
         <todolist-list-items [items]="_list.items"></todolist-list-items>
     `
 })
