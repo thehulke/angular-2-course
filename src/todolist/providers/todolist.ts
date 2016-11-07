@@ -8,11 +8,16 @@ import {Injectable} from "@angular/core";
 
 @Injectable()
 export class Todolist {
-    private items: Item[];
+
+    private _items: Item[];
+    public items: Item[];
     private store: Storage;
 
     constructor(store: Storage) {
-        this.items = [];
+        this.items = [
+            new Item('first task'),
+            new Item('another task')
+        ];
         this.store = store;
     }
 
@@ -20,6 +25,10 @@ export class Todolist {
         this.items.push(new Item(title))
         this.store.setItem('ITEMS', this.items);
     }
+
+    // get items(){
+    //     return this._items;
+    // }
 
     public removeItem(item: Item): void {
         const index = this.items.indexOf(item);
