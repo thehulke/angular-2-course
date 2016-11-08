@@ -1,8 +1,14 @@
 import {Component} from "@angular/core";
 
 @Component({
-  selector: 'app',
-  template: `<h1>Angular Training Seed</h1>`,
+    selector: 'app',
+    template: `
+        <a href="login">Login</a>
+        <a href="todolist">TodoList</a>
+        <router-outlet></router-outlet>
+    `
 })
 
-export class AppComponent {}
+export class AppComponent {
+
+}
