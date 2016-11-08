@@ -13,6 +13,8 @@ import {BrowserModule} from "@angular/platform-browser";
 import {Storage} from "./providers/storage";
 import {toUpperCasePipe} from "./pipes/toUpperCase.pipe";
 import {FilterPipe} from "./pipes/filter.pipe";
+import {CsIfDirective} from "./directives/csif.directive";
+import {DangerDirective} from "./directives/danger.directive";
 
 @NgModule({
     declarations: [
@@ -25,7 +27,9 @@ import {FilterPipe} from "./pipes/filter.pipe";
         TodoListListItemComponent,
         TodoListListItemsComponent,
         toUpperCasePipe,
-        FilterPipe
+        FilterPipe,
+        CsIfDirective,
+        DangerDirective
 
     ],
     providers: [Storage, Todolist],
