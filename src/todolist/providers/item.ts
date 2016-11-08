@@ -6,11 +6,13 @@ export class Item {
 
     public title: string;
     public done: boolean;
+    public created: Date;
 
-    constructor(title: string) {
+    constructor(title: string, done?: boolean) {
 
         this.title = title;
         this.done = false;
+        this.created = new Date();
     }
 
 }

@@ -11,6 +11,8 @@ import {Todolist} from './providers/todolist';
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {Storage} from "./providers/storage";
+import {toUpperCasePipe} from "./pipes/toUpperCase.pipe";
+import {FilterPipe} from "./pipes/filter.pipe";
 
 @NgModule({
     declarations: [
@@ -22,6 +24,9 @@ import {Storage} from "./providers/storage";
         TodoListListInput,
         TodoListListItemComponent,
         TodoListListItemsComponent,
+        toUpperCasePipe,
+        FilterPipe
+
     ],
     providers: [Storage, Todolist],
     imports: [BrowserModule],

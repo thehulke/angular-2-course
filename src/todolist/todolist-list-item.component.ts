@@ -7,6 +7,7 @@ import {Item} from "./providers/item";
     <li>
         <input type="checkbox" [checked]="item.done"/>
         {{item.title}}
+        {{item.created}}
         <span>X</span>
     </li>
     `
@@ -15,5 +16,4 @@ import {Item} from "./providers/item";
 export class TodoListListItemComponent {
 
     @Input() item: Item
-
 }
