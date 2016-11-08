@@ -16,6 +16,10 @@ import {FilterPipe} from "./pipes/filter.pipe";
 import {CsIfDirective} from "./directives/csif.directive";
 import {DangerDirective} from "./directives/danger.directive";
 
+/**
+ * Decorator for instancing each module, here we import all of our child components, pipes, directives, providers
+ * etc..
+ */
 @NgModule({
     declarations: [
         TodoListComponent,
@@ -32,10 +36,14 @@ import {DangerDirective} from "./directives/danger.directive";
         DangerDirective
 
     ],
-    providers: [Storage, Todolist],
-    imports: [BrowserModule],
-    exports: [TodoListComponent]
+    providers: [Storage, Todolist], // Business logic.
+    imports: [BrowserModule], // Web browser sync module.
+    exports: [TodoListComponent] // for external use (such as parent module), this is the module to render.
 })
+
+/**
+ * TodoListModule will need to be imported for use in the module that imports it.
+ */
 export class TodoListModule {
 
 }
