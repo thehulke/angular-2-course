@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
 import {Todolist} from "./providers/todolist";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
     selector: "todolist",
@@ -10,7 +11,11 @@ import {Todolist} from "./providers/todolist";
     `
 })
 export class TodoListComponent {
-    constructor(todolist: Todolist) {
+
+    constructor(todolist: Todolist, router: ActivatedRoute) {
         console.log(todolist);
+
+        // Subscribing to the router query params for later use.
+        router.queryParams.subscribe( (params) => console.log(params) )
     }
 }
